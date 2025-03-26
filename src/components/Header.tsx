@@ -17,7 +17,7 @@ const Header = () => {
         <div className="flex gap-7">
           {/* //todo search input */}
 
-          <div title="Go to SkyNow github" className="h-6 w-6">
+          <div title="Go to SkyNow github" className="h-6 w-6 hover:scale-120 ease-in-out duration-200">
             <Link
               to={"https://github.com/Shivam-Verma21/SkyNow"}
               target="_blank"
