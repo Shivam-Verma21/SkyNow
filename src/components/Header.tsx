@@ -1,7 +1,7 @@
 // import React from "react";
 import { Link } from "react-router";
 import { useTheme } from "@/context/theme-provider";
-import { Moon, Sun } from "lucide-react";
+import { Github, Moon, Sun } from "lucide-react";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -14,10 +14,20 @@ const Header = () => {
           <img src="/logo.png" alt="SkyNow" className="h-20 rounded-full" />
         </Link>
 
-        <div>
-          {/* search */}
-          
+        <div className="flex gap-7">
+          {/* //todo search input */}
+
+          <div title="Go to SkyNow github" className="h-6 w-6">
+            <Link
+              to={"https://github.com/Shivam-Verma21/SkyNow"}
+              target="_blank"
+            >
+              <Github />
+            </Link>
+          </div>
+
           <div
+            title="Toggle Theme"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className={`flex items-center cursor-pointer transition-transform duration-500 
               ${isDark ? "rotate-180" : "rotate-0"}`}
