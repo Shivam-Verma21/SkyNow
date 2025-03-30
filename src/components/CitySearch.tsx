@@ -37,8 +37,8 @@ const CitySearch = () => {
       lon: parseFloat(lon),
       country,
     });
-
-    navigate(`/city/${name}??lat=${lat}&lon=${lon}`);
+    
+    navigate(`/city/${name}?lat=${lat.trim()}&lon=${lon.trim()}`);
     setOpen(false);
     setQuery("");
   };
@@ -83,13 +83,14 @@ const CitySearch = () => {
           {history.length > 0 && (
             <>
               <CommandSeparator />
-              <CommandGroup heading="Recent Searches">
-                <div>
-                  <p>Recent Searches</p>
+              <CommandGroup>
+                <div className="flex justify-between items-center px-2 my-2">
+                  <p className="text-xs text-muted-foreground">Recent Searches</p>
                   <Button
                     variant={"ghost"}
                     size={"sm"}
                     onClick={() => clearHistory.mutate()}
+                    className="cursor-pointer"
                   >
                     <XCircle className="h-4 w-4" />
                     Clear
