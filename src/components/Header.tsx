@@ -3,7 +3,6 @@ import { Link } from "react-router";
 import CitySearch from "./CitySearch";
 import ThemeToggle from "./ThemeToggle";
 import { useTheme } from "@/context/theme-provider";
-import { Github } from "lucide-react";
 
 const Header = () => {
   const { theme } = useTheme();
@@ -31,7 +30,8 @@ const Header = () => {
               to={"https://github.com/Shivam-Verma21/SkyNow"}
               target="_blank"
             >
-              <Github />
+              {theme === 'dark' && <img src="/github-mark-white.png"/>}
+              {theme === 'light' && <img src="/github-mark.png"/>}
             </Link>
           </div>
 
