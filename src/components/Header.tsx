@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import CitySearch from "./CitySearch";
 import ThemeToggle from "./ThemeToggle";
 import { useTheme } from "@/context/theme-provider";
+import { Github } from "lucide-react";
 
 const Header = () => {
   const { theme } = useTheme();
@@ -19,10 +20,10 @@ const Header = () => {
           />
         </Link>
 
-        <div className="flex gap-4 items-center">
+        <div className="flex sm:gap-5 gap-2 items-center">
           <CitySearch />
 
-          {/* <div
+          <div
             title="Go to SkyNow github"
             className="h-6 w-6 hover:scale-120 ease-in-out duration-200"
           >
@@ -32,7 +33,7 @@ const Header = () => {
             >
               <Github />
             </Link>
-          </div> */}
+          </div>
 
           <ThemeToggle />
         </div>
