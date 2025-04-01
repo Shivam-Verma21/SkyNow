@@ -1,5 +1,5 @@
 import { useTheme } from "@/context/theme-provider";
-import { Github, Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 
 const ThemeToggle = () => {
     const { theme, setTheme } = useTheme();
